@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #217346;
+    --secondary-color: #64748b;
+    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-main: #1e293b;
+    --success-color: #10b981;
+    --excel-green: #217346;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text-main);
+    direction: rtl;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.table-container {
+    margin-top: 1rem;
+    overflow-x: auto;
+    background: white;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: right;
+}
+
+th {
+    background: #f1f5f9;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background: #f8fafc;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.actions-bar {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+/* Excel Grid Style */
+.google-sheets-style {
+    border: 1px solid #dcdcdc;
+    background: #f1f3f4;
+    max-height: 600px;
+    overflow: auto;
+    position: relative;
+    border-radius: 4px;
+}
+
+.google-sheets-style table {
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: max-content;
+}
+
+.google-sheets-style th.row-header {
+    width: 60px;
+    background: #f1f3f4;
+    border: 1px solid #dcdcdc;
+    color: #555;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    position: sticky;
+    right: 0;
+    z-index: 20;
+    user-select: none;
+}
+
+.google-sheets-style th.col-header {
+    height: 30px;
+    min-width: 120px;
+    background: #f1f3f4;
+    border: 1px solid #dcdcdc;
+    color: #555;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    user-select: none;
+}
+
+.google-sheets-style th.corner-header {
+    width: 60px;
+    height: 30px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    background: #f1f3f4;
+    border: 1px solid #dcdcdc;
+}
+
+.google-sheets-style td {
+    border: 0.5px solid #dadce0;
+    padding: 0;
+    background: white;
+    min-width: 120px;
+}
+
+.sheet-input {
+    width: 100%;
+    height: 32px;
+    border: 2px solid transparent;
+    padding: 0 8px;
+    font-size: 13px;
+    color: #333;
+    background: transparent;
+    display: block;
+    outline: none;
+    transition: none;
+}
+
+/* Excel-like Green Focus Effect */
+.sheet-input:focus {
+    border: 2px solid var(--excel-green);
+    z-index: 100;
+    position: relative;
+    background: white !important;
+}
+
+.sheet-input:hover:not(:focus) {
+    background: rgba(33, 115, 70, 0.03);
+}
+
+/* Custom Scrollbar */
+.google-sheets-style::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+.google-sheets-style::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.google-sheets-style::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+}
+
+.google-sheets-style::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

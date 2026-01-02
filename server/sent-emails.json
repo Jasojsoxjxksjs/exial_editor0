@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1767358838304,
+    "to": "aly228935@gmail.com",
+    "subject": "طلبات العملاء",
+    "message": "مقدم من مدخل البيانات محمود احمد علي",
+    "status": "success",
+    "fileSize": "14.22 MB",
+    "sentAt": "2026-01-02T13:00:38.304Z",
+    "error": null
+  },
+  {
+    "id": 1767358538199,
+    "to": "aly228935@gmail.com",
+    "subject": "طلبات العملاء",
+    "message": "مقدم من مدخل البيانات محمود احمد علي",
+    "status": "success",
+    "fileSize": "14.22 MB",
+    "sentAt": "2026-01-02T12:55:38.199Z",
+    "error": null
+  }
+]
